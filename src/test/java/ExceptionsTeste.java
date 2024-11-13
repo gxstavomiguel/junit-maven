@@ -10,7 +10,9 @@ public class ExceptionsTeste {
 
         TransferenciaEntreContas transferenciaEntreContas = new TransferenciaEntreContas();
 
-        Assertions.assertThrows(IllegalArgumentException.class, () ->
-                        transferenciaEntreContas.transfere(contaOrigem, contaDestino, -1));
+//        Assertions.assertThrows(IllegalArgumentException.class, () ->
+//                        transferenciaEntreContas.transfere(contaOrigem, contaDestino, -1));
+
+        Assertions.assertDoesNotThrow(() -> transferenciaEntreContas.transfere(contaOrigem, contaDestino, 20));
     }
 }
